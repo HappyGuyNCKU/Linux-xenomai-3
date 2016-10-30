@@ -1,0 +1,82 @@
+arch/arm/mach-bcm2709/armctrl.c: In function ‘armctrl_unmask_irq’:
+arch/arm/mach-bcm2709/armctrl.c:137:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   unsigned int data = (unsigned int)irq_get_chip_data(d->irq);
+   ^
+In file included from ./arch/arm/include/asm/atomic.h:19:0,
+                 from include/linux/atomic.h:4,
+                 from include/linux/spinlock.h:414,
+                 from include/linux/mmzone.h:7,
+                 from include/linux/gfp.h:5,
+                 from include/linux/mm.h:9,
+                 from kernel/acct.c:46:
+kernel/acct.c: In function ‘acct_pin_kill’:
+./arch/arm/include/asm/cmpxchg.h:205:3: warning: value computed is not used [-Wunused-value]
+  ((__typeof__(*(ptr)))__cmpxchg_mb((ptr),   \
+   ^
+kernel/acct.c:174:2: note: in expansion of macro ‘cmpxchg’
+  cmpxchg(&acct->ns->bacct, pin, NULL);
+  ^
+drivers/clk/bcm/clk-bcm2835.c: In function ‘bcm2835_register_pll_divider’:
+drivers/clk/bcm/clk-bcm2835.c:1358:20: warning: assignment discards ‘const’ qualifier from pointer target type [enabled by default]
+  init.parent_names = &data->source_pll->name;
+                    ^
+net/bluetooth/mgmt.c: In function ‘read_local_oob_ext_data_complete’:
+net/bluetooth/mgmt.c:6465:8: warning: ‘r192’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+  memcpy(&eir[eir_len], data, data_len);
+        ^
+net/bluetooth/mgmt.c:6476:13: note: ‘r192’ was declared here
+  u8 *h192, *r192, *h256, *r256;
+             ^
+net/bluetooth/mgmt.c:6465:8: warning: ‘h192’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+  memcpy(&eir[eir_len], data, data_len);
+        ^
+net/bluetooth/mgmt.c:6476:6: note: ‘h192’ was declared here
+  u8 *h192, *r192, *h256, *r256;
+      ^
+drivers/mailbox/bcm2835-mailbox.c: In function ‘bcm2835_mbox_probe’:
+drivers/mailbox/bcm2835-mailbox.c:175:23: warning: assignment discards ‘const’ qualifier from pointer target type [enabled by default]
+  mbox->controller.ops = &bcm2835_mbox_chan_ops;
+                       ^
+drivers/tty/serial/amba-pl011.c:2172:12: warning: ‘pl011_probe_dt_alias’ defined but not used [-Wunused-function]
+ static int pl011_probe_dt_alias(int index, struct device *dev)
+            ^
+drivers/usb/host/dwc_otg/dwc_otg_attr.c: In function ‘spramdump_show’:
+drivers/usb/host/dwc_otg/dwc_otg_attr.c:921:27: warning: unused variable ‘otg_dev’ [-Wunused-variable]
+         dwc_otg_device_t *otg_dev = dwc_otg_drvdev(_dev);
+                           ^
+drivers/video/fbdev/bcm2708_fb.c: In function ‘bcm2708_fb_check_var’:
+drivers/video/fbdev/bcm2708_fb.c:221:6: warning: unused variable ‘yres’ [-Wunused-variable]
+  int yres;
+      ^
+drivers/net/wireless/rtl8192cu/os_dep/linux/os_intfs.c:999:2: warning: initialization from incompatible pointer type [enabled by default]
+  .ndo_select_queue = rtw_select_queue,
+  ^
+drivers/net/wireless/rtl8192cu/os_dep/linux/os_intfs.c:999:2: warning: (near initialization for ‘rtw_netdev_ops.ndo_select_queue’) [enabled by default]
+drivers/watchdog/bcm2835_wdt.c:23:0: warning: "PM_RSTC" redefined [enabled by default]
+ #define PM_RSTC    0x1c
+ ^
+In file included from arch/arm/mach-bcm2709/include/mach/irqs.h:26:0,
+                 from ./arch/arm/include/asm/irq.h:7,
+                 from ./arch/arm/include/asm/ipipe_base.h:26,
+                 from include/linux/ipipe_base.h:47,
+                 from include/linux/kernel.h:12,
+                 from include/linux/list.h:8,
+                 from include/linux/module.h:9,
+                 from drivers/watchdog/bcm2835_wdt.c:17:
+arch/arm/mach-bcm2709/include/mach/platform.h:200:0: note: this is the location of the previous definition
+ #define PM_RSTC          (PM_BASE+0x1c)
+ ^
+drivers/watchdog/bcm2835_wdt.c:24:0: warning: "PM_WDOG" redefined [enabled by default]
+ #define PM_WDOG    0x24
+ ^
+In file included from arch/arm/mach-bcm2709/include/mach/irqs.h:26:0,
+                 from ./arch/arm/include/asm/irq.h:7,
+                 from ./arch/arm/include/asm/ipipe_base.h:26,
+                 from include/linux/ipipe_base.h:47,
+                 from include/linux/kernel.h:12,
+                 from include/linux/list.h:8,
+                 from include/linux/module.h:9,
+                 from drivers/watchdog/bcm2835_wdt.c:17:
+arch/arm/mach-bcm2709/include/mach/platform.h:202:0: note: this is the location of the previous definition
+ #define PM_WDOG          (PM_BASE+0x24)
+ ^

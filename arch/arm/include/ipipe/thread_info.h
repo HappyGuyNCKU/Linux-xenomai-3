@@ -1,0 +1,1 @@
+/home/jason/RTOS/Hua_workspace/xenomai-3/kernel/cobalt/include/ipipe/thread_info.h
